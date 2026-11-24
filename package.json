@@ -1,0 +1,17 @@
+{
+  "name": "@woody_s/sr-workflow",
+  "version": "0.1.0",
+  "description": "A Claude Code skill for delivering GitHub service requests in verified, issue-specific Git worktrees.",
+  "license": "MIT",
+  "author": "Chiwoo Song",
+  "type": "module",
+  "bin": { "sr-workflow": "bin/sr-workflow.js" },
+  "engines": { "node": ">=22" },
+  "repository": { "type": "git", "url": "git+https://github.com/ChiwooSong/sr-workflow.git" },
+  "homepage": "https://github.com/ChiwooSong/sr-workflow#readme",
+  "bugs": "https://github.com/ChiwooSong/sr-workflow/issues",
+  "keywords": ["claude-code", "agent-skills", "git-worktree", "github-issues"],
+  "files": ["bin/sr-workflow.js", "sr-workflow/SKILL.md", "sr-workflow/references/*.md", "sr-workflow/scripts/check_worktree.py"],
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" },
+  "scripts": { "test": "node --test tests/install.test.js" }
+}
