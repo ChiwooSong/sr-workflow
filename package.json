@@ -1,6 +1,6 @@
 {
-  "name": "@woody_s/sr-workflow",
-  "version": "0.1.0",
+  "name": "sr-workflow",
+  "version": "0.1.1",
   "description": "A Claude Code skill for delivering GitHub service requests in verified, issue-specific Git worktrees.",
   "license": "MIT",
   "author": "Chiwoo Song",

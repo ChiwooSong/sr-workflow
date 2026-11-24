@@ -8,7 +8,7 @@ Requires Node.js 22+ for the installer, Git, Claude Code and an authenticated Gi
 
 ```sh
 npx --yes @woody_s/configure-subagents@1.0.0 install --agent claude
-npx --yes @woody_s/sr-workflow@0.1.0 install
+npx --yes sr-workflow@0.1.1 install
 ```
 
 The second command installs the skill under your Claude configuration directory (`~/.claude/skills/sr-workflow` by default). To share it in one repository, use `install --project .` from that repository instead. Reinstalling identical content preserves it. If the installed directory differs, install to a separate project and compare the files before upgrading. For manual installation, copy the repository's `sr-workflow/` directory to the same skills location.
