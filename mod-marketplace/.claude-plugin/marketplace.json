@@ -1,0 +1,12 @@
+{
+  "name": "sr-workflow-local",
+  "description": "Companion plugin bundled with the sr-workflow npm installer.",
+  "owner": { "name": "Chiwoo Song" },
+  "plugins": [
+    {
+      "name": "sr-agent-map",
+      "description": "Observe the current Claude Code session's subagents.",
+      "source": "./plugins/sr-agent-map"
+    }
+  ]
+}
