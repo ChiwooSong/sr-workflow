@@ -1,17 +1,40 @@
 {
   "name": "sr-workflow",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Claude Code skill for GitHub service requests in verified Git worktrees, with the Agent Map Mod.",
   "license": "MIT",
   "author": "Chiwoo Song",
   "type": "module",
-  "bin": { "sr-workflow": "bin/sr-workflow.js" },
-  "engines": { "node": ">=22" },
-  "repository": { "type": "git", "url": "git+https://github.com/ChiwooSong/sr-workflow.git" },
+  "bin": {
+    "sr-workflow": "bin/sr-workflow.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiwooSong/sr-workflow.git"
+  },
   "homepage": "https://github.com/ChiwooSong/sr-workflow#readme",
   "bugs": "https://github.com/ChiwooSong/sr-workflow/issues",
-  "keywords": ["claude-code", "agent-skills", "git-worktree", "github-issues"],
-  "files": ["bin/sr-workflow.js", "sr-workflow/SKILL.md", "sr-workflow/references/*.md", "sr-workflow/scripts/check_worktree.py", "mod-marketplace/"],
-  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" },
-  "scripts": { "test": "node --test tests/install.test.js" }
+  "keywords": [
+    "claude-code",
+    "agent-skills",
+    "git-worktree",
+    "github-issues"
+  ],
+  "files": [
+    "bin/sr-workflow.js",
+    "sr-workflow/SKILL.md",
+    "sr-workflow/references/*.md",
+    "sr-workflow/scripts/check_worktree.py",
+    "mod-marketplace/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "node --test tests/install.test.js"
+  }
 }

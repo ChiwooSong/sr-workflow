@@ -8,12 +8,12 @@ Requires Node.js 22+ for the installer and Claude Code CLI 2.1.299+ on `PATH` fo
 
 ```sh
 npx --yes @woody_s/configure-subagents@1.0.0 install --agent claude
-npx --yes sr-workflow@0.2.1 install
+npx --yes sr-workflow@0.2.2 install
 ```
 
-The second command installs `/sr-workflow` in your Claude configuration directory (`~/.claude/skills/sr-workflow` by default) and registers the bundled Mod through the Claude plugin CLI. With `install --project .`, it puts the skill in the current repository and enables the Mod for your local sessions in that repository. Use `install --skill-only` if your organization only allows standalone skills. Reinstalling identical content preserves it. If the installer finds a locally edited copy, compare it against the package before upgrading. For manual skill-only installation, copy the repository's `sr-workflow/` directory to the same skills location.
+The second command installs `/sr-workflow` in your Claude configuration directory (`~/.claude/skills/sr-workflow` by default) and registers the bundled Mod through the Claude plugin CLI. With `install --project .`, it puts the skill in the current repository and enables the Mod for your local sessions in that repository. Use `install --skill-only` if your organization only allows standalone skills. Reinstalling identical content preserves it. When upgrading from 0.2.1, the installer also detects the previous release as differing content. If it reports “Existing skill differs”, back up the indicated sr-workflow directory outside the skills directory, move that installed copy aside, rerun the same install command and merge any team edits from the backup. For manual skill-only installation, copy the repository's `sr-workflow/` directory to the same skills location.
 
-For a direct installation from the GitHub release, download the tarball and run `npx --yes --package=./sr-workflow-0.2.1.tgz -- sr-workflow install` from its folder. The npm package is version **0.2.1** and its bundled **Agent Map plugin is version 0.2.0**. Check registration with `claude plugin list` and look for `sr-agent-map@sr-workflow-local`.
+For a direct installation from the GitHub release, download the tarball and run `npx --yes --package=./sr-workflow-0.2.2.tgz -- sr-workflow install` from its folder. The npm package is version **0.2.2** and its bundled **Agent Map plugin is version 0.2.0**. Check registration with `claude plugin list` and look for `sr-agent-map@sr-workflow-local`.
 
 ## Use in Claude Code
 
@@ -21,7 +21,7 @@ For a direct installation from the GitHub release, download the tarball and run 
 /sr-workflow setup
 ```
 
-Run from the project root. Setup applies project roles, configures the project verifier and exercises one meaningful baseline. Once the baseline and failure-detection checks succeed, reply with the issue URL. For a fresh session, supply it directly:
+Run from the project root. Setup applies project roles, configures the project verifier and exercises one meaningful baseline. The main session invokes the worktree’s `/sr-workflow-verify` skill. For projects prepared with 0.2.1, preserve the old project verifier and use its commands in the new skill when applying this revision. Once the baseline and failure-detection checks succeed, reply with the issue URL. For a fresh session, supply it directly:
 
 ```text
 /sr-workflow https://github.com/OWNER/REPO/issues/123

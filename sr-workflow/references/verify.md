@@ -1,6 +1,8 @@
 # Verify the project's actual build
 
-Read the active project verifier before editing it. If needed, create `.claude/skills/verify/SKILL.md` with name `verify`, an accurate description, real project commands and the evidence required below. Check which definition the current session actually invokes, especially in a linked worktree or when another skill shares its name. Record a command run and a skill invocation separately. Resume in the target worktree if a new session is required.
+Create or reuse `.claude/skills/sr-workflow-verify/SKILL.md` in the target checkout with `name: sr-workflow-verify`, a description and model invocation enabled. If the project has a legacy `.claude/skills/verify/SKILL.md`, preserve it and reuse its project commands, fixtures and scripts. Resolve relative resource paths from the new skill directory. Update SR-owned agent instructions, templates and setup records that invoke the old name. Apply this check on setup and when resuming with an issue URL.
+
+From the main session invoke the Skill tool with `skill: sr-workflow-verify`. Confirm that the loaded directory belongs to the target worktree and record the baseline result separately. The bundled `/verify` is a different command. If the tool rejects the call or loads another definition, record the error and resolved path if available. Resume from the target worktree after loading the corrected skill; direct test output alone leaves the invocation unverified.
 
 ## Select a representative boundary
 
